@@ -1,0 +1,111 @@
+@mixin padV($pad){
+	padding-top: $pad;
+	padding-bottom: $pad;
+}
+@mixin marV($mar){
+	margin-top: $mar;
+	margin-bottom: $mar;
+}
+@mixin marH($mar){
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+// if #navbar-fixed is working 
+// body{ 
+// 	padding-top: 50px; 
+// }
+// #navbar-fixed{
+// 	.navbar-fixed-top{
+// 		.navbar-header{
+// 			button{
+// 				@media screen and (max-width: 780px){
+// 				 	margin-right: 25px;
+// 				}
+// 			}
+// 			.navbar-brand{
+// 				@include padV(0);
+// 				img{
+// 					height: 100%;
+// 					width: auto;
+// 					@media screen and (max-width: 780px){
+// 					 	margin-left: 10px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		.navbar-collapse{
+// 			ul{
+// 				li{
+// 					@media screen and (max-width: 767px){
+// 					 	margin-left: 18px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+header{
+	.containe-fluid{
+		height: 660px; //must change 
+		background: #000 url("../../img/stray-dog-big-city-lion.jpg") center/cover no-repeat;
+		.navbar{
+			background: transparent;
+			border: none;
+			margin-bottom: 0;
+			.navbar-header{
+				.navbar-toggle{
+					// margin-top: 10px;
+					background: rgba(0,0,0,.4);
+					span{
+						background: #FFF;
+					}	
+					@media screen and (max-width: 780px){
+					 	margin-right: 25px;
+					}
+					&:hover{
+						background: rgba(0,0,0,.5);	
+					}
+				}
+				.navbar-brand{
+					@include padV(0);
+					img{
+						height: 100%;
+						width: auto;
+						margin-top: 10px;
+						@media screen and (max-width: 780px){
+						 	margin-left: 10px;
+						 	padding-bottom: 15px;
+						}
+						@media screen and (max-width: 780px) and (min-width: 768px){
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+			.navbar-collapse{
+				ul{
+					li{
+						a{
+							color: #474747;
+							&:hover{
+								color: #000;
+							}
+						}
+						@media screen and (min-width: 768px){
+						 	@include marV(10px);
+						 	font-size: 20px;
+						}
+						@media screen and (max-width: 767px){
+						 	@include marH(15px);
+						 	&:hover{
+							 	background: rgba(0,0,0,.1) url(../../img/icon.png) 97%/30px no-repeat ;
+						 	}
+						}
+					}
+				}
+			}
+		}
+	}
+}
