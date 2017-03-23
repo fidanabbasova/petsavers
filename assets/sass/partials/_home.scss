@@ -2,14 +2,19 @@
 	padding-top: $pad;
 	padding-bottom: $pad;
 }
+@mixin padH($pad){
+	padding-right: $pad;
+	padding-left: $pad;
+}
 @mixin marV($mar){
 	margin-top: $mar;
 	margin-bottom: $mar;
 }
 @mixin marH($mar){
-	margin-right: 15px;
-	margin-left: 15px;
+	margin-right: $mar;
+	margin-left: $mar;
 }
+
 
 // if #navbar-fixed is working 
 // body{ 
@@ -46,17 +51,16 @@
 // 	}
 // }
 
-header{
-	.containe-fluid{
-		height: 660px; //must change 
-		background: #000 url("../../img/stray-dog-big-city-lion.jpg") center/cover no-repeat;
+#header{
+	padding-bottom: 10px;
+	background: #000 url("../../img/stray-dog-big-city-lion.jpg") center/cover no-repeat;
+	> .containe-fluid{
 		.navbar{
 			background: transparent;
 			border: none;
 			margin-bottom: 0;
 			.navbar-header{
 				.navbar-toggle{
-					// margin-top: 10px;
 					background: rgba(0,0,0,.4);
 					span{
 						background: #FFF;
@@ -89,22 +93,113 @@ header{
 					li{
 						a{
 							color: #474747;
-							&:hover{
-								color: #000;
-							}
 						}
 						@media screen and (min-width: 768px){
 						 	@include marV(10px);
 						 	font-size: 20px;
+						 	&:hover{
+						 		border-bottom: 2px solid #F7941D;
+						 		margin-bottom: 8px;
+						 	}
 						}
 						@media screen and (max-width: 767px){
 						 	@include marH(15px);
 						 	&:hover{
+						 		color: #000;
 							 	background: rgba(0,0,0,.1) url(../../img/icon.png) 97%/30px no-repeat ;
 						 	}
 						}
 					}
 				}
+			}
+		}
+	}
+	header{
+		padding-bottom: 250px;
+		h1{
+			margin-top: 150px;
+			font-size: 60px;
+			font-family: 'Josefin Sans', sans-serif;
+			strong{
+				color: rgba(0,0,0,.6);
+				span{
+					color: #F7941D;
+				}
+			}
+		}
+	}
+}
+#sign{
+	.buttons{
+		.btn{
+			font-family: 'Josefin Sans', sans-serif;
+			font-style: normal;
+			font-size: 25px;
+			border-radius: 0;
+			&:hover, &:focus{
+				outline: none;
+			}
+			&:first-child{
+				color: #31B0D5;	
+				background: rgba(255,255,255,.1);
+				border: 2px solid  #31B0D5; 
+				&:hover{
+					background: #D07D18;	
+					color: #FFF;
+					border-color: #D07D18;
+				}
+			}
+			&:last-child{
+				background: rgba(255,255,255,.1);	
+				color: #D07D18;	
+				border: 2px solid #D07D18;
+				&:hover{
+					background: #31B0D5;
+					color: #FFF;
+					border-color: #31B0D5;
+				}			
+			}	
+			@media screen and (max-width: 767px){
+				font-size: 20px;
+				&:first-child{
+					margin-top: 20px;
+					margin-bottom: 5px;
+				}
+				&:last-child{
+					margin-bottom: 20px;
+				}
+				
+			}
+			@media screen and (min-width: 768px){
+				@include marV(26px);
+			}	
+		}		
+	}
+	.quote{
+		@media screen and (min-width: 769px){
+			@include marV(25px);
+		}
+		@media screen and (max-width: 768px){
+			@include marV(13px);
+		}
+		@media screen and (max-width: 531px){
+			@include marV(30px);
+		}
+		@media screen and (max-width: 369px){
+			@include marV(18px);
+		}
+		p{	
+			font-family: 'Josefin Sans', sans-serif;
+			font-size: 20px;
+			margin-bottom: 0;
+			@media screen and (max-width: 768px){
+				font-size: 27px;
+			}
+			@media screen and (max-width: 531px){
+				font-size: 18px;
+			}
+			@media screen and (max-width: 328px){
+				font-size: 17px;
 			}
 		}
 	}

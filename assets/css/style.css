@@ -5806,50 +5806,127 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-header .containe-fluid {
-  height: 660px;
+#header {
+  padding-bottom: 10px;
   background: #000 url("../../img/stray-dog-big-city-lion.jpg") center/cover no-repeat; }
-  header .containe-fluid .navbar {
+  #header > .containe-fluid .navbar {
     background: transparent;
     border: none;
     margin-bottom: 0; }
-    header .containe-fluid .navbar .navbar-header .navbar-toggle {
+    #header > .containe-fluid .navbar .navbar-header .navbar-toggle {
       background: rgba(0, 0, 0, 0.4); }
-      header .containe-fluid .navbar .navbar-header .navbar-toggle span {
+      #header > .containe-fluid .navbar .navbar-header .navbar-toggle span {
         background: #FFF; }
       @media screen and (max-width: 780px) {
-        header .containe-fluid .navbar .navbar-header .navbar-toggle {
+        #header > .containe-fluid .navbar .navbar-header .navbar-toggle {
           margin-right: 25px; } }
-      header .containe-fluid .navbar .navbar-header .navbar-toggle:hover {
+      #header > .containe-fluid .navbar .navbar-header .navbar-toggle:hover {
         background: rgba(0, 0, 0, 0.5); }
-    header .containe-fluid .navbar .navbar-header .navbar-brand {
+    #header > .containe-fluid .navbar .navbar-header .navbar-brand {
       padding-top: 0;
       padding-bottom: 0; }
-      header .containe-fluid .navbar .navbar-header .navbar-brand img {
+      #header > .containe-fluid .navbar .navbar-header .navbar-brand img {
         height: 100%;
         width: auto;
         margin-top: 10px; }
         @media screen and (max-width: 780px) {
-          header .containe-fluid .navbar .navbar-header .navbar-brand img {
+          #header > .containe-fluid .navbar .navbar-header .navbar-brand img {
             margin-left: 10px;
             padding-bottom: 15px; } }
         @media screen and (max-width: 780px) and (min-width: 768px) {
-          header .containe-fluid .navbar .navbar-header .navbar-brand img {
+          #header > .containe-fluid .navbar .navbar-header .navbar-brand img {
             margin-top: 20px; } }
-    header .containe-fluid .navbar .navbar-collapse ul li a {
+    #header > .containe-fluid .navbar .navbar-collapse ul li a {
       color: #474747; }
-      header .containe-fluid .navbar .navbar-collapse ul li a:hover {
-        color: #000; }
     @media screen and (min-width: 768px) {
-      header .containe-fluid .navbar .navbar-collapse ul li {
+      #header > .containe-fluid .navbar .navbar-collapse ul li {
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 20px; } }
+        font-size: 20px; }
+        #header > .containe-fluid .navbar .navbar-collapse ul li:hover {
+          border-bottom: 2px solid #F7941D;
+          margin-bottom: 8px; } }
     @media screen and (max-width: 767px) {
-      header .containe-fluid .navbar .navbar-collapse ul li {
+      #header > .containe-fluid .navbar .navbar-collapse ul li {
         margin-right: 15px;
         margin-left: 15px; }
-        header .containe-fluid .navbar .navbar-collapse ul li:hover {
+        #header > .containe-fluid .navbar .navbar-collapse ul li:hover {
+          color: #000;
           background: rgba(0, 0, 0, 0.1) url(../../img/icon.png) 97%/30px no-repeat; } }
+  #header header {
+    padding-bottom: 250px; }
+    #header header h1 {
+      margin-top: 150px;
+      font-size: 60px;
+      font-family: 'Josefin Sans', sans-serif; }
+      #header header h1 strong {
+        color: rgba(0, 0, 0, 0.6); }
+        #header header h1 strong span {
+          color: #F7941D; }
+
+#sign .buttons .btn {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  border-radius: 0; }
+  #sign .buttons .btn:hover, #sign .buttons .btn:focus {
+    outline: none; }
+  #sign .buttons .btn:first-child {
+    color: #31B0D5;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid  #31B0D5; }
+    #sign .buttons .btn:first-child:hover {
+      background: #D07D18;
+      color: #FFF;
+      border-color: #D07D18; }
+  #sign .buttons .btn:last-child {
+    background: rgba(255, 255, 255, 0.1);
+    color: #D07D18;
+    border: 2px solid #D07D18; }
+    #sign .buttons .btn:last-child:hover {
+      background: #31B0D5;
+      color: #FFF;
+      border-color: #31B0D5; }
+  @media screen and (max-width: 767px) {
+    #sign .buttons .btn {
+      font-size: 20px; }
+      #sign .buttons .btn:first-child {
+        margin-top: 20px;
+        margin-bottom: 5px; }
+      #sign .buttons .btn:last-child {
+        margin-bottom: 20px; } }
+  @media screen and (min-width: 768px) {
+    #sign .buttons .btn {
+      margin-top: 26px;
+      margin-bottom: 26px; } }
+@media screen and (min-width: 769px) {
+  #sign .quote {
+    margin-top: 25px;
+    margin-bottom: 25px; } }
+@media screen and (max-width: 768px) {
+  #sign .quote {
+    margin-top: 13px;
+    margin-bottom: 13px; } }
+@media screen and (max-width: 531px) {
+  #sign .quote {
+    margin-top: 30px;
+    margin-bottom: 30px; } }
+@media screen and (max-width: 369px) {
+  #sign .quote {
+    margin-top: 18px;
+    margin-bottom: 18px; } }
+#sign .quote p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  margin-bottom: 0; }
+  @media screen and (max-width: 768px) {
+    #sign .quote p {
+      font-size: 27px; } }
+  @media screen and (max-width: 531px) {
+    #sign .quote p {
+      font-size: 18px; } }
+  @media screen and (max-width: 328px) {
+    #sign .quote p {
+      font-size: 17px; } }
 
 /*# sourceMappingURL=style.css.map */
