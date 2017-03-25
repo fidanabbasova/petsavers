@@ -9,6 +9,8 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
 
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +23,7 @@
 <body>
 <!-- -------------------------------------- -->
 <!-- <section id="navbar-fixed">
-	<div class="containe-fluid">
+	<div class="container-fluid">
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -49,7 +51,7 @@
 </section> -->
 <!-- -------------------------------------- -->
 <section id="header">
-	<div class="containe-fluid">
+	<div class="container-fluid">
 		<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
@@ -82,7 +84,7 @@
 	</header>
 </section>
 <!-- -------------------------------------- -->
-<section id="sign">
+<section id="sign-panel">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-4 col-sm-5 buttons">
@@ -96,5 +98,112 @@
 		</div>
 	</div>
 </section>
+<!-- -------------------------------------- -->
+<section id="lost-found-panel">
+	<div class="container-fluid">
+		<div class="container text-center">
+			<section id="lost">
+				<div class="row">
+					<h1><a href="#">Have you <span class="orgSpan">lost</span> your pet?</a></h1>
+					<span><a href="#">Enter your pet's information</a></span>
+				</div>
+				<div class="row">
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/001.jpg"></a>
+						<a href="#">FOUND: He is a 2 years old, white and brown, crossbreed dog with short hair.</a>
+					</div>
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/002.jpg" ></a>
+						<a href="#">FOUND: She is a 1 year old, white and brown, crossbreed cat with short hair.</a>
+					</div>
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/003.jpg" ></a>
+						<a href="#">FOUND: He is a 2 years old, white and brown, crossbreed dog with short hair.</a>
+					</div>
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/004.jpg"></a>
+						<a href="#">FOUND: She is a 1 year old, white and brown, crossbreed cat with short hair.</a>
+					</div>
+				</div>
+			</section>
+			<section id="found">
+				<div class="row">
+					<h1><a href="#">Have you <span class="blueSpan">found</span> a pet?</a></h1>
+					<span><a href="#">Enter the pet's information</a></span>
+				</div>
+				<div class="row">
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/005.jpg" ></a>
+						<a href="#">LOST: She is a 1 year old, white and brown, crossbreed cat with short hair.</a>
+					</div>
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/006.jpg" ></a>
+						<a href="#">LOST: He is a 1 year old, white and brown, crossbreed dog with short hair.</a>
+					</div>
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/007.jpg" ></a>
+						<a href="#">LOST: She is a 5 years old, white and brown, crossbreed cat with short hair.</a>
+					</div>
+					<div class="col-xs-3">
+						<a href="#" class="square"><img src="img/008.jpg" ></a>
+						<a href="#">LOST: He is a 2 months old, white and brown, crossbreed dog with short hair.</a>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</div>
+</section>
+<script>
+	function imgResize() {
+		$('.square').each(function() {  
+	    	$aWidth = $(this).width();
+	    	$(this).height($aWidth);
+		});	
+	    $('.square > img').each(function() {
+	    	$width = $(this).width();
+	    	$height = $(this).height();
+
+
+	    	if( $width > $height ){
+
+	        	
+	        	// $marginLeft = -($width - $aWidth) / 2;
+	        	// $(this).css('margin-left', $marginLeft);
+	        	$(this).height($aWidth);
+
+	    	}else{
+	        	// $marginTop = -($height - $aWidth) / 2;
+	        	// $(this).css('margin-top', $marginTop);
+	        	$(this).width($aWidth);
+
+	    	 } 
+	    });
+	}
+
+
+
+	$(document).ready(function() {
+	    imgResize();
+	});
+
+	$(window).resize(function() {
+	    imgResize();
+	});
+
+	// function maxHeight{
+	// 	$('section .row:nth-child(2)').each(function(){
+	// 		$maxH = $(this).first().height();
+	// 		$(this).children('img:nth(n)')  
+	// 		// where n is the child place in parent list start from 0 onwards
+			
+	// 		if( $(this).children('div:nth(1)').height() > $maxH){
+	// 			$(this).children('div:nth(1)').height( $maxH);
+	// 		}else{
+
+	// 		}
+	// 	});
+	// }
+</script>
 </body>
 </html>

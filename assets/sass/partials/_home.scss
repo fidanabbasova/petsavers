@@ -1,3 +1,6 @@
+$orange: #D07D18;
+$blue:#31B0D5;
+
 @mixin padV($pad){
 	padding-top: $pad;
 	padding-bottom: $pad;
@@ -15,6 +18,9 @@
 	margin-left: $mar;
 }
 
+.Josefina{
+	font-family: 'Josefin Sans', sans-serif;
+}
 
 // if #navbar-fixed is working 
 // body{ 
@@ -54,7 +60,7 @@
 #header{
 	padding-bottom: 10px;
 	background: #000 url("../../img/stray-dog-big-city-lion.jpg") center/cover no-repeat;
-	> .containe-fluid{
+	> .container-fluid{
 		.navbar{
 			background: transparent;
 			border: none;
@@ -98,7 +104,7 @@
 						 	@include marV(10px);
 						 	font-size: 20px;
 						 	&:hover{
-						 		border-bottom: 2px solid #F7941D;
+						 		border-bottom: 2px solid $orange;
 						 		margin-bottom: 8px;
 						 	}
 						}
@@ -119,7 +125,7 @@
 		h1{
 			margin-top: 150px;
 			font-size: 60px;
-			font-family: 'Josefin Sans', sans-serif;
+			@extend .Josefina;
 			strong{
 				color: rgba(0,0,0,.6);
 				span{
@@ -129,10 +135,10 @@
 		}
 	}
 }
-#sign{
+#sign-panel{
 	.buttons{
 		.btn{
-			font-family: 'Josefin Sans', sans-serif;
+			@extend .Josefina;
 			font-style: normal;
 			font-size: 25px;
 			border-radius: 0;
@@ -140,23 +146,23 @@
 				outline: none;
 			}
 			&:first-child{
-				color: #31B0D5;	
+				color: $blue;	
 				background: rgba(255,255,255,.1);
-				border: 2px solid  #31B0D5; 
+				border: 2px solid  $blue; 
 				&:hover{
-					background: #D07D18;	
+					background: $orange;	
 					color: #FFF;
-					border-color: #D07D18;
+					border-color: $orange;
 				}
 			}
 			&:last-child{
 				background: rgba(255,255,255,.1);	
-				color: #D07D18;	
-				border: 2px solid #D07D18;
+				color: $orange;	
+				border: 2px solid $orange;
 				&:hover{
-					background: #31B0D5;
+					background: $blue;
 					color: #FFF;
-					border-color: #31B0D5;
+					border-color: $blue;
 				}			
 			}	
 			@media screen and (max-width: 767px){
@@ -189,7 +195,7 @@
 			@include marV(18px);
 		}
 		p{	
-			font-family: 'Josefin Sans', sans-serif;
+			@extend .Josefina;
 			font-size: 20px;
 			margin-bottom: 0;
 			@media screen and (max-width: 768px){
@@ -203,4 +209,82 @@
 			}
 		}
 	}
+}
+#lost-found-panel{
+	background-image: linear-gradient(#EAEAEA, #FFF);
+	// background-image: linear-gradient( #FFF, $orange, #FFF, $blue,  #FFF);
+	#lost, #found{
+		@include marV(40px);
+		.row{
+			a{
+				text-decoration: none;
+			}
+			h1{ 
+				margin-bottom: 30px;
+				font-size: 48px;
+				@extend .Josefina;
+				a{
+					border-bottom: 1px solid  #565657;
+					color: #565657;
+					.orgSpan{
+						color: $blue;
+					}
+					.blueSpan{
+						color: $orange;
+					}
+				}
+			}
+			> span{
+				a{
+					padding: 5px 10px;
+					@extend .Josefina;
+					font-weight: normal;
+					color: #333333;
+					border: 1px solid #333;
+					font-size: 16px;
+					&:hover, &:focus{
+						background: #333333;
+						color: #FFF;
+					} 
+				}	
+			}
+			&:first-child{
+				margin-bottom: 40px;
+			}
+			.col-xs-3{
+				@media screen and (max-width: 500px){
+					padding: 5px;
+				}
+				.square{
+					display: block;
+					// border-radius: 50%;
+					overflow: hidden;
+					@media screen and (min-width:992px){
+					filter: grayscale(1);			
+						&:hover{
+
+							filter: grayscale(0);
+							transition: all 0.6s ease;
+						}
+					}
+				}
+				a:nth-child(2){
+					display: block;
+					margin: 20px;
+					text-decoration: none;
+					color: #333;
+					@media screen and (max-width: 992px){
+						@include marV(5px);
+						font-size: 12px;
+					}
+					@media screen and (max-width: 700px){
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	
+
+
 }
