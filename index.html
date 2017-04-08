@@ -19,6 +19,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/bootstrap-formhelpers-phone.js"></script>
 </head>
 <body>
 <!-- -------------------------------------- -->
@@ -42,7 +44,7 @@
 						<li><a href="#" title="">Home</a></li>
 						<li><a href="#" title="">Lost &amp; Found Pets</a></li>
 						<li><a href="#" title="">Adoption</a></li>
-						<li><a href="#" title="">About</a></li>
+						<li><a href="#" title="">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -71,7 +73,7 @@
 						<li><a href="#" title="">Home</a></li>
 						<li><a href="#" title="">Lost &amp; Found Pets</a></li>
 						<li><a href="#" title="">Adoption</a></li>
-						<li><a href="#" title="">About</a></li>
+						<li><a href="#" title="">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -108,19 +110,19 @@
 					<span><a href="#">Enter your pet's information</a></span>
 				</div>
 				<div class="row">
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/001.jpg"></a>
 						<a href="#">FOUND: He is a 2 years old, white and brown, crossbreed dog with short hair.</a>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/002.jpg" ></a>
 						<a href="#">FOUND: She is a 1 year old, white and brown, crossbreed cat with short hair.</a>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/003.jpg" ></a>
 						<a href="#">FOUND: He is a 2 years old, white and brown, crossbreed dog with short hair.</a>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/004.jpg"></a>
 						<a href="#">FOUND: She is a 1 year old, white and brown, crossbreed cat with short hair.</a>
 					</div>
@@ -132,78 +134,169 @@
 					<span><a href="#">Enter the pet's information</a></span>
 				</div>
 				<div class="row">
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/005.jpg" ></a>
 						<a href="#">LOST: She is a 1 year old, white and brown, crossbreed cat with short hair.</a>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/006.jpg" ></a>
 						<a href="#">LOST: He is a 1 year old, white and brown, crossbreed dog with short hair.</a>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/007.jpg" ></a>
 						<a href="#">LOST: She is a 5 years old, white and brown, crossbreed cat with short hair.</a>
 					</div>
-					<div class="col-xs-3">
+					<div class="col-sm-3 col-xs-6">
 						<a href="#" class="square"><img src="img/008.jpg" ></a>
 						<a href="#">LOST: He is a 2 months old, white and brown, crossbreed dog with short hair.</a>
 					</div>
 				</div>
 			</section>
-
 		</div>
 	</div>
 </section>
-<script>
-	function imgResize() {
-		$('.square').each(function() {  
-	    	$aWidth = $(this).width();
-	    	$(this).height($aWidth);
-		});	
-	    $('.square > img').each(function() {
-	    	$width = $(this).width();
-	    	$height = $(this).height();
-
-
-	    	if( $width > $height ){
-
-	        	
-	        	// $marginLeft = -($width - $aWidth) / 2;
-	        	// $(this).css('margin-left', $marginLeft);
-	        	$(this).height($aWidth);
-
-	    	}else{
-	        	// $marginTop = -($height - $aWidth) / 2;
-	        	// $(this).css('margin-top', $marginTop);
-	        	$(this).width($aWidth);
-
-	    	 } 
-	    });
-	}
-
-
-
-	$(document).ready(function() {
-	    imgResize();
-	});
-
-	$(window).resize(function() {
-	    imgResize();
-	});
-
-	// function maxHeight{
-	// 	$('section .row:nth-child(2)').each(function(){
-	// 		$maxH = $(this).first().height();
-	// 		$(this).children('img:nth(n)')  
-	// 		// where n is the child place in parent list start from 0 onwards
-			
-	// 		if( $(this).children('div:nth(1)').height() > $maxH){
-	// 			$(this).children('div:nth(1)').height( $maxH);
-	// 		}else{
-
-	// 		}
-	// 	});
-	// }
-</script>
+<!-- -------------------------------------- -->
+<section id="adoption">
+	<div class="container-fluid">
+		<div class="container text-center">
+			<div class="row">
+				<img src="img/logo-circle.png" width="100" class="center-block img-responsive">
+				<h1>Adopt a new best friend</h1>
+				<p>You are the answer to providing homeless pets a second chance. Adopt and offer deserving pets a bright future.</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/001.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/002.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/003.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/004.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/005.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/006.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/007.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<a href="#" class="square"><img src="img/008.jpg"></a>
+					<a href="#">
+						<p>Gender: Female</p>
+						<p>Age: 6 years</p>
+						<p>Location: Baku</p>
+					</a>
+				</div>
+			</div>
+			<nav aria-label="">
+			  	<ul class="pager">
+			    	<li><button type="button" class="btn col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-6"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+Previous</button></li>
+			    	<li><button type="button" class="btn col-md-3 col-sm-4 col-xs-6">Next <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+</button></li>
+			  	</ul>
+			</nav>
+		</div>
+	</div>
+</section>
+<!-- -------------------------------------- -->
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="mapouter">
+				<div id="gmap_canvas">
+					<div class="col-md-12 col-sm-12 col-xs-12 massage">
+						<div class="col-xs-12 text-center">
+							<h1> Send us a message</h1>
+						</div>
+						<form>
+							<div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-12">
+							    <div class="form-group-lg">
+							    	<input type="text" class="form-control" id="name" placeholder="Name" required >
+							    </div>
+							    <div class="form-group-lg">
+							    	<input type="email" class="form-control" id="email" placeholder="Email address" required >
+							    </div>
+							    <div class="form-group-lg">
+							    	<input type="text" class="form-control bfh-phone" data-format="+994 (ddd) ddd-dddd" required>
+							    </div>
+							</div>
+							<div class="col-md-4 col-sm-5 col-xs-12">
+							    <div class="form-group-lg">
+							    	<textarea name="message" class="form-control" id="message" rows="6" placeholder="Write message" required></textarea>
+							    </div>
+							    <button type="submit" class="btn btn-default col-md-3 col-sm-4 col-xs-12 pull-right" id="submessage"><span>Send </span><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></button>
+							</div>
+						</form>
+					</div>
+					<iframe class="col-md-12 col-sm-12 col-xs-12" height="500" frameborder="0" scrolling="no" marginheight="0" src="https://maps.google.com/maps?q=Baku, AZ, &t=&z=14&ie=UTF8&iwloc=&output=embed" marginwidth="0">
+					</iframe>
+					<a href="http://www.embedgooglemap.net"></a>
+				</div>
+				<style>
+					#gmap_canvas{height:500px;width:100%;}
+					#mapouter{overflow:hidden;height:500px;width:100%;}
+				</style>
+			</div>
+		</div>
+		<div class="container-fluid footer">
+			<div class="col-sm-4 follow text-center">
+				<span>Follow us</span>
+				<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+			</div>
+			<div class="col-sm-8 text-center">
+				<address>
+					<span><i class="fa fa-copyright" aria-hidden="true"></i> petsavers 2017 | </span>
+					Created by <a href="mailto:fidan.a@code.edu.az">Fidan Abbasova</a>
+				</address>
+			</div>
+		</div>
+	</div>
+</footer>
 </body>
 </html>

@@ -251,22 +251,19 @@ $blue:#31B0D5;
 			&:first-child{
 				margin-bottom: 40px;
 			}
-			.col-xs-3{
-				@media screen and (max-width: 500px){
-					padding: 5px;
+			.col-sm-3, .col-xs-6{
+				@media screen and (max-width: 768px){
+					padding: 10px;
 				}
 				.square{
 					display: block;
-					// border-radius: 50%;
 					overflow: hidden;
 					@media screen and (min-width:992px){
 					filter: grayscale(1);			
 						&:hover{
-
 							filter: grayscale(0);
-							transition: all 0.6s ease;
 						}
-					}
+					}	
 				}
 				a:nth-child(2){
 					display: block;
@@ -274,17 +271,213 @@ $blue:#31B0D5;
 					text-decoration: none;
 					color: #333;
 					@media screen and (max-width: 992px){
-						@include marV(5px);
-						font-size: 12px;
-					}
-					@media screen and (max-width: 700px){
 						display: none;
 					}
 				}
 			}
 		}
 	}
-	
-
-
+}
+#adoption{
+	padding-top: 40px;
+	background-image: linear-gradient(#EAEAEA, #FFF);
+	.row{
+		&:first-child{
+			margin-bottom: 30px;
+			h1{ 
+				margin-top: 0;
+				padding: 10px;
+				@extend .Josefina;
+				font-size: 48px;
+				border-bottom: 1px solid  #565657;	
+			}
+			p{
+				font-size: 18px;
+			}
+		}
+		.col-sm-3, .col-xs-6{
+			@media screen and (max-width: 768px){
+				padding: 10px;
+			}
+			.square{
+				display: block;
+				border-radius: 50%;
+				overflow: hidden;
+				@media screen and (min-width:992px){
+					opacity: 1;	
+					&:hover{
+						opacity: 0.9;
+						transition: all 0.6s ease;
+					}
+				}
+			}
+			a:nth-child(2){
+				p{
+					margin: 0;
+				}
+				display: block;
+				margin: 10px 10px 30px;
+				text-decoration: none;
+				color: #333;
+			}
+		}
+	}
+	nav{
+		ul{
+			margin-top: 0;
+			li{
+				.btn{
+					font-style: normal;
+					font-size: 25px;
+					border-radius: 0;
+					&:hover, &:focus{
+					outline: none;
+					}
+				}
+				&:first-child{
+					.btn{
+						color: $blue;	
+						background: rgba(255,255,255,.1);
+						border: 2px solid  $blue; 
+						&:hover{
+							background: $orange;	
+							color: #FFF;
+							border-color: $orange;
+						}
+					}
+				}
+				&:last-child{
+					.btn{
+						background: rgba(255,255,255,.1);	
+						color: $orange;	
+						border: 2px solid $orange;
+						&:hover{
+							background: $blue;
+							color: #FFF;
+							border-color: $blue;
+						}			
+					}	
+				}	
+			}		
+		}	
+	}
+}
+footer{
+	margin-top: 20px;
+	.row{
+		&:first-child{
+			position: relative;
+			#mapouter{		
+				@media screen and (max-width: 768px){
+					height: 650px;
+				}
+				@media screen and (max-width: 450px){
+					height: 700px;
+				}
+				#gmap_canvas{
+					@media screen and (max-width: 768px){
+							height: 650px;
+						}
+						@media screen and (max-width: 450px){
+							height: 700px;
+						}
+					.massage{
+						overflow: hidden;
+						position: absolute;
+						z-index:20;
+						h1{
+							margin-top: 100px;
+							margin-bottom: 50px;
+							display: inline-block;
+							@extend .Josefina;
+							font-size: 48px;
+							border-bottom: 1px solid  #565657;
+							padding: 10px;
+						}
+						.form-group-lg{
+							margin-bottom: 10px;
+							input, textarea{
+								border-radius: 0;
+								border: 1px solid  $blue;
+								background: rgba(255,255,255,.9);
+							}
+						}
+						.btn{
+							margin-bottom: 40px;
+							padding: 0;
+							height: 50px;
+							border-radius: 0;
+							color: $blue;	
+							font-size: 18px;
+							background: rgba(255,255,255,.9);
+							border: 1px solid  $blue; 
+							&:hover, &:focus{
+								outline: none;
+								background: $blue;	
+								color: #FFF;
+								border-color: $blue;
+							}
+							span,i{
+								line-height: 50px;
+							}
+							i{
+								vertical-align: middle;
+							}
+						}
+					}
+					iframe{
+						opacity: 0.7;
+						padding: 0;
+						@media screen and (max-width: 768px){
+							height: 650px;
+						}
+						@media screen and (max-width: 450px){
+							height: 700px;
+						}
+					}
+				}	
+			}
+		}
+		
+	}
+	.footer{
+			@extend .Josefina;
+			font-size: 20px;
+			min-height: 60px;
+			background: #FFF;
+			color: #333;
+			line-height: 60px;
+			@media screen and(max-width:466px){
+				.col-sm-8{
+					font-size: 14px;
+				}				
+			}
+			i{
+				vertical-align: middle;
+			}
+			.follow{
+				span{
+					margin-right: 20px;
+					font-size: 24px;
+				}
+				a{
+					color: #333;
+					margin-right: 10px;
+					&:hover{
+						border-top: 10px solid $orange;
+						transition: all 0.5s ease;
+					}
+				}
+			}
+			span{
+				line-height: 60px;
+			}
+			address{
+				margin-bottom: 0;
+				a{
+					text-decoration: none;
+					color: $orange;
+				}
+			}
+		}
 }
