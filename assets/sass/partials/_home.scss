@@ -22,60 +22,34 @@ $blue:#31B0D5;
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-// if #navbar-fixed is working 
-// body{ 
-// 	padding-top: 50px; 
-// }
-// #navbar-fixed{
-// 	.navbar-fixed-top{
-// 		.navbar-header{
-// 			button{
-// 				@media screen and (max-width: 780px){
-// 				 	margin-right: 25px;
-// 				}
-// 			}
-// 			.navbar-brand{
-// 				@include padV(0);
-// 				img{
-// 					height: 100%;
-// 					width: auto;
-// 					@media screen and (max-width: 780px){
-// 					 	margin-left: 10px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 		.navbar-collapse{
-// 			ul{
-// 				li{
-// 					@media screen and (max-width: 767px){
-// 					 	margin-left: 18px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-#header{
+#home{
 	padding-bottom: 10px;
 	background: #000 url("../../img/stray-dog-big-city-lion.jpg") center/cover no-repeat;
 	> .container-fluid{
+		.navbar-fixed-top{
+			background: #FFF !important;
+			.navbar-header{
+				.navbar-toggle{
+					background:  #333 !important;
+					span{
+						background: #FFF !important;
+					}	
+				}
+			}		
+		}	
 		.navbar{
 			background: transparent;
 			border: none;
 			margin-bottom: 0;
 			.navbar-header{
 				.navbar-toggle{
-					background: rgba(0,0,0,.4);
+					border: none;
+					background: transparent;
 					span{
-						background: #FFF;
+						background: #333;
 					}	
 					@media screen and (max-width: 780px){
 					 	margin-right: 25px;
-					}
-					&:hover{
-						background: rgba(0,0,0,.5);	
 					}
 				}
 				.navbar-brand{
@@ -99,18 +73,21 @@ $blue:#31B0D5;
 					li{
 						a{
 							color: #474747;
+							&:hover{
+								cursor: pointer;
+							}
 						}
 						@media screen and (min-width: 768px){
 						 	@include marV(10px);
 						 	font-size: 20px;
-						 	&:hover{
-						 		border-bottom: 2px solid $orange;
-						 		margin-bottom: 8px;
+						 	.active{
+						 		border-top: 10px solid $orange;
+						 		margin-top: -10px;
 						 	}
 						}
 						@media screen and (max-width: 767px){
 						 	@include marH(15px);
-						 	&:hover{
+						 	.active{
 						 		color: #000;
 							 	background: rgba(0,0,0,.1) url(../../img/icon.png) 97%/30px no-repeat ;
 						 	}
@@ -384,7 +361,7 @@ footer{
 					.massage{
 						overflow: hidden;
 						position: absolute;
-						z-index:20;
+						z-index: 2;
 						h1{
 							margin-top: 100px;
 							margin-bottom: 50px;

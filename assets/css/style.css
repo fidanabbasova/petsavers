@@ -5806,64 +5806,71 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.Josefina, #header header h1, #sign-panel .buttons .btn, #sign-panel .quote p, #lost-found-panel #lost .row h1, #lost-found-panel #found .row h1, #lost-found-panel #lost .row > span a, #lost-found-panel #found .row > span a, #adoption .row:first-child h1, footer .row:first-child #mapouter #gmap_canvas .massage h1, footer .footer {
+.Josefina, #home header h1, #sign-panel .buttons .btn, #sign-panel .quote p, #lost-found-panel #lost .row h1, #lost-found-panel #found .row h1, #lost-found-panel #lost .row > span a, #lost-found-panel #found .row > span a, #adoption .row:first-child h1, footer .row:first-child #mapouter #gmap_canvas .massage h1, footer .footer {
   font-family: 'Josefin Sans', sans-serif; }
 
-#header {
+#home {
   padding-bottom: 10px;
   background: #000 url("../../img/stray-dog-big-city-lion.jpg") center/cover no-repeat; }
-  #header > .container-fluid .navbar {
+  #home > .container-fluid .navbar-fixed-top {
+    background: #FFF !important; }
+    #home > .container-fluid .navbar-fixed-top .navbar-header .navbar-toggle {
+      background: #333 !important; }
+      #home > .container-fluid .navbar-fixed-top .navbar-header .navbar-toggle span {
+        background: #FFF !important; }
+  #home > .container-fluid .navbar {
     background: transparent;
     border: none;
     margin-bottom: 0; }
-    #header > .container-fluid .navbar .navbar-header .navbar-toggle {
-      background: rgba(0, 0, 0, 0.4); }
-      #header > .container-fluid .navbar .navbar-header .navbar-toggle span {
-        background: #FFF; }
+    #home > .container-fluid .navbar .navbar-header .navbar-toggle {
+      border: none;
+      background: transparent; }
+      #home > .container-fluid .navbar .navbar-header .navbar-toggle span {
+        background: #333; }
       @media screen and (max-width: 780px) {
-        #header > .container-fluid .navbar .navbar-header .navbar-toggle {
+        #home > .container-fluid .navbar .navbar-header .navbar-toggle {
           margin-right: 25px; } }
-      #header > .container-fluid .navbar .navbar-header .navbar-toggle:hover {
-        background: rgba(0, 0, 0, 0.5); }
-    #header > .container-fluid .navbar .navbar-header .navbar-brand {
+    #home > .container-fluid .navbar .navbar-header .navbar-brand {
       padding-top: 0;
       padding-bottom: 0; }
-      #header > .container-fluid .navbar .navbar-header .navbar-brand img {
+      #home > .container-fluid .navbar .navbar-header .navbar-brand img {
         height: 100%;
         width: auto;
         margin-top: 10px; }
         @media screen and (max-width: 780px) {
-          #header > .container-fluid .navbar .navbar-header .navbar-brand img {
+          #home > .container-fluid .navbar .navbar-header .navbar-brand img {
             margin-left: 10px;
             padding-bottom: 15px; } }
         @media screen and (max-width: 780px) and (min-width: 768px) {
-          #header > .container-fluid .navbar .navbar-header .navbar-brand img {
+          #home > .container-fluid .navbar .navbar-header .navbar-brand img {
             margin-top: 20px; } }
-    #header > .container-fluid .navbar .navbar-collapse ul li a {
+    #home > .container-fluid .navbar .navbar-collapse ul li a {
       color: #474747; }
+      #home > .container-fluid .navbar .navbar-collapse ul li a:hover {
+        cursor: pointer; }
     @media screen and (min-width: 768px) {
-      #header > .container-fluid .navbar .navbar-collapse ul li {
+      #home > .container-fluid .navbar .navbar-collapse ul li {
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 20px; }
-        #header > .container-fluid .navbar .navbar-collapse ul li:hover {
-          border-bottom: 2px solid #D07D18;
-          margin-bottom: 8px; } }
+        #home > .container-fluid .navbar .navbar-collapse ul li .active {
+          border-top: 10px solid #D07D18;
+          margin-top: -10px; } }
     @media screen and (max-width: 767px) {
-      #header > .container-fluid .navbar .navbar-collapse ul li {
+      #home > .container-fluid .navbar .navbar-collapse ul li {
         margin-right: 15px;
         margin-left: 15px; }
-        #header > .container-fluid .navbar .navbar-collapse ul li:hover {
+        #home > .container-fluid .navbar .navbar-collapse ul li .active {
           color: #000;
           background: rgba(0, 0, 0, 0.1) url(../../img/icon.png) 97%/30px no-repeat; } }
-  #header header {
+  #home header {
     padding-bottom: 250px; }
-    #header header h1 {
+    #home header h1 {
       margin-top: 150px;
       font-size: 60px; }
-      #header header h1 strong {
+      #home header h1 strong {
         color: rgba(0, 0, 0, 0.6); }
-        #header header h1 strong span {
+        #home header h1 strong span {
           color: #F7941D; }
 
 #sign-panel .buttons .btn {
@@ -6053,7 +6060,7 @@ footer {
     footer .row:first-child #mapouter #gmap_canvas .massage {
       overflow: hidden;
       position: absolute;
-      z-index: 20; }
+      z-index: 2; }
       footer .row:first-child #mapouter #gmap_canvas .massage h1 {
         margin-top: 100px;
         margin-bottom: 50px;
